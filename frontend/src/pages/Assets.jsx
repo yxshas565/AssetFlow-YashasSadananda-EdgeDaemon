@@ -119,7 +119,7 @@ export default function Assets() {
 
       {showCreate && (
         <AssetFormModal
-          categories={categories.data?.items || []}
+          categories={categories.data || []}
           onClose={() => setShowCreate(false)}
           onCreated={handleCreated}
         />
