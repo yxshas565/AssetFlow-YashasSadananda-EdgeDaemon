@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.routers import auth, org, assets, allocations, bookings, maintenance
+from app.routers import auth, org, assets, allocations, bookings, maintenance, audits
 
 app = FastAPI(
     title="AssetFlow API",
@@ -29,6 +29,7 @@ app.include_router(assets.router)
 app.include_router(allocations.router)
 app.include_router(bookings.router)
 app.include_router(maintenance.router)
+app.include_router(audits.router)
 
 # Remaining routers are added incrementally through the day as each module is built.
 # from app.routers import org, assets, allocations, bookings, maintenance, audits
