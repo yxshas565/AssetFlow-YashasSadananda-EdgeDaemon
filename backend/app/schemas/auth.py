@@ -29,3 +29,21 @@ class EmployeeOut(BaseModel):
     role: RoleEnum
     department_id: int | None
     is_active: bool
+
+
+class ForgotPasswordRequest(BaseModel):
+    email: EmailStr
+
+
+class ForgotPasswordResponse(BaseModel):
+    # Stubbed "email delivery": in a real deployment this token would be
+    # emailed, never returned in the API response. Returned here only so
+    # the frontend can display it for demo purposes — explicitly a
+    # deferred scope item, not a security oversight.
+    reset_token: str
+    expires_in_minutes: int
+
+
+class ResetPasswordRequest(BaseModel):
+    token: str
+    new_password: str

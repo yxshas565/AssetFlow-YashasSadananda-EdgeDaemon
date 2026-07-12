@@ -1,0 +1,70 @@
+.orgsetup-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.orgsetup-tabs {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.orgsetup-tab {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: color 150ms ease, border-color 150ms ease;
+}
+
+.orgsetup-tab:hover {
+  color: var(--text-primary);
+}
+
+.orgsetup-tab.active {
+  color: var(--accent-strong);
+  border-bottom-color: var(--accent);
+}
+
+.orgsetup-panel {
+  padding: 1.25rem;
+}
+
+.orgsetup-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.orgsetup-panel-header h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.orgsetup-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orgsetup-table th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-color, var(--border-subtle));
+}
+
+.orgsetup-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-color, var(--border-subtle));
+}

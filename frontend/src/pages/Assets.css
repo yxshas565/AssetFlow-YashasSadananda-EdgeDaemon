@@ -1,0 +1,115 @@
+.assets-page {
+  max-width: 1200px;
+}
+
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--space-5);
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.page-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 4px;
+}
+
+.page-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.assets-toolbar {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  margin-bottom: var(--space-5);
+  flex-wrap: wrap;
+}
+.assets-toolbar .input {
+  flex: 1;
+  min-width: 240px;
+}
+.assets-status-select {
+  max-width: 220px;
+  cursor: pointer;
+}
+
+.assets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.asset-card {
+  padding: var(--space-4);
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  font-family: inherit;
+}
+.asset-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+  transition: transform var(--dur-base) var(--ease-out), border-color var(--dur-base), box-shadow var(--dur-base);
+}
+
+.asset-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.asset-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.asset-name {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.asset-meta {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  align-items: center;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+}
+.pagination-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.empty-state {
+  padding: var(--space-8);
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+.empty-state-inline {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}

@@ -1,0 +1,9 @@
+.audits-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.row-selected {
+  background: var(--accent-soft);
+}
