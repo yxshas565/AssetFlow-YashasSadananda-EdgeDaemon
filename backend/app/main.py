@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.routers import auth
+from app.routers import auth, org
 
 app = FastAPI(
     title="AssetFlow API",
@@ -24,6 +24,7 @@ def health_check():
 
 
 app.include_router(auth.router)
+app.include_router(org.router)
 
 # Remaining routers are added incrementally through the day as each module is built.
 # from app.routers import org, assets, allocations, bookings, maintenance, audits
