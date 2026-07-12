@@ -12,7 +12,14 @@ class Department(Base):
 
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str] = mapped_column(String(120), nullable=False)
-    head_employee_id: Mapped[int | None] = mapped_column(ForeignKey("employees.id"), nullable=True)
+    head_employee_id: Mapped[int | None] = mapped_column(
+    ForeignKey(
+        "employees.id",
+        use_alter=True,
+        name="fk_departments_head_employee",
+    ),
+    nullable=True,
+)
     parent_department_id: Mapped[int | None] = mapped_column(ForeignKey("departments.id"), nullable=True)
     is_active: Mapped[bool] = mapped_column(Boolean, default=True)
 
