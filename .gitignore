@@ -22,3 +22,9 @@ dist/
 
 # Docker
 *.log
+
+# Local test scratch files
+asset.json
+alloc.json
+empty.json
+*.scratch.json
