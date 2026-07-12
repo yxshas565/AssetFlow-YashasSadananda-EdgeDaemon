@@ -1,7 +1,7 @@
 from datetime import date, datetime, timezone
 from decimal import Decimal
 
-from sqlalchemy import String, ForeignKey, DateTime, Date, Numeric, Boolean, Text, Enum as SAEnum
+from sqlalchemy import String, ForeignKey, DateTime, Date, Numeric, Boolean, Text, Enum as SAEnum, Index
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.core.database import Base
@@ -10,6 +10,9 @@ from app.models.enums import AssetStatusEnum
 
 class Asset(Base):
     __tablename__ = "assets"
+    __table_args__ = (
+        Index("ix_assets_status_category", "status", "category_id"),
+    )
 
     id: Mapped[int] = mapped_column(primary_key=True)
     asset_tag: Mapped[str] = mapped_column(String(20), nullable=False, unique=True)  # e.g. AF-0001
